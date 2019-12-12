@@ -39,11 +39,12 @@ How use?
 	rss-reader date --date 20191212 --fb2 --output-path C:\Users\User\Desktop\HW5  - CLI saves data from local storage sorted by date in fb2 format in home the directory
 
 	
-All data from sites saved in the local storage in json format. Name of this storage is news.json
+
 ````
 JSON structure:
 	 
 ```
+All data from sites saved in the local storage in json format. Name of this storage is news.json
 
 {
 		"title":[pub_date, link, img_url, description, formatted_date]  
