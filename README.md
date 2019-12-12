@@ -1,8 +1,8 @@
-#RSS reader is a command utility, which receives RSS URL and prints the result in convenient output format
+RSS reader is a command utility, which receives RSS URL and prints the result in convenient output format
 
 Input data has the following interface:
 
-`rss_reader.py source [-h] [--version] [--verbose] [--json] [--limit LIMIT]`
+`rss_reader.py source [-h] [--version] [--verbose] [--json] [--limit LIMIT][--to-fb2][--output-path PATH]`
 ````
 positional arguments:
 source - URL which provides a RSS feed
@@ -16,16 +16,26 @@ optional arguments or date if you want use --date:
 -- to-fb2  - conver news to fb2 format. If not path saves file data.fb2 in file in home directory.
 --output-path - CLI saves news in fb2 format along this path
 --verbose - debug mode
+````
+How use?
+````
 
-# How use?
 	rss-reader https://news.yahoo.com/rss - CLI prints news from site
+	
 	rss-reader https://news.yahoo.com/rss --limit 1  - CLI prints one news form the site
+	
 	rss-reader https://news.yahoo.com/rss --limit 1 --verbose - debug mode to this command 
+	
 	rss-reader https://news.yahoo.com/rss --json - CLI prints news in json format from the site
+	
 	rss-reader https://news.yahoo.com/rss --to-fb2 - CLI saves data from the site im home directory
+	
 	rss-reader https://news.yahoo.com/rss --to-fb2 --path C:\Users\User\Desktop\HW5 - CLI saves data from site in the directiry  C:\Users\User\Desktop\HW5
+	
 	rss-redaer date --date 20191212 - CLI prints news from local storage by date
+	
 	rss-reader date --date 20191212 --fb2 - CLI saves data from local storage sorted by date in fb2 format in home directory
+	
 	rss-reader date --date 20191212 --fb2 --output-path C:\Users\User\Desktop\HW5  - CLI saves data from local storage sorted by date in fb2 format in home the directory
 
 	
@@ -59,7 +69,7 @@ Formatted date:
 	Wed, 11 Dec 2019 11:49:35 -0500 = 20191211
 
 #How install?
-1) clone repository from 
+1) clone repository from https://github.com/PavelMartysiuk/Final-Task
 2) `$cd rss_readerend
 3)  `$python setup.py install
 4) run `$rss_reader https://news.yahoo.com/rss --limit 2 --verbose`
