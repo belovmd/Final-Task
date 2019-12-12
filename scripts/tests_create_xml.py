@@ -1,6 +1,8 @@
 from scripts.create_fb2 import create_fb2
 import unittest
 
+"""Test for func create_fb2"""
+
 
 class TestsCreateXml(unittest.TestCase):
 

@@ -64,8 +64,11 @@ def process_arguments(args):
     max_limit = None
     if args.source == 'date':
         if args.date:
-            news, max_limit = retrieve_from_cache(args.date)
-            logging.debug(args, max_limit)
+            try:
+                news, max_limit = retrieve_from_cache(args.date)
+                logging.debug(args, max_limit)
+            except TypeError:
+                pass
     else:
         try:
             news, title, max_limit = retrieve_from_url(
@@ -132,12 +135,16 @@ Don't touch file argument.
 
 def retrieve_from_cache(date=None, file='news.json'):
     first_news = read_news_from_cache(file)
-    max_limit = len(first_news)
-    if date:
-        news, limit = filter_news_by_date(user_date=date, news=first_news)
-        return news, limit
+    try:
+        max_limit = len(first_news)
+    except TypeError:
+        pass
     else:
-        return first_news, max_limit
+        if date:
+            news, limit = filter_news_by_date(user_date=date, news=first_news)
+            return news, limit
+        else:
+            return first_news, max_limit
 
 
 """Function retrieves news from cite and return this news and it quantity"""

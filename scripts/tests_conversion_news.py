@@ -9,17 +9,23 @@ from scripts.conversion_news import unpack_news
 from scripts.conversion_news import filter_news_by_date
 import unittest
 
+"""Test for func filter_news_by_date """
 
-class TestUnpackWithDate(unittest.TestCase):
 
-    def test_unpack(self):
+class TestFilterNewsByDate(unittest.TestCase):
+
+    def test(self):
         user_date = datetime.date(2019, 12, 5)
         news = {'Devastating factory fire kills at least 43 in Indian capital':
                 ["Sat, 07 Dec 2019 23:23:22 -0500", '20191207'],
                 '50 Great Gadget and Gear Gifts for the Holidays':
                     ['Sat, 05 Dec 2019 23:23:22 -0500', '20191205']}
         self.assertEqual(filter_news_by_date(user_date, news), ({'50 Great Gadget and Gear Gifts for the Holidays':
-                                                                ['Sat, 05 Dec 2019 23:23:22 -0500', '20191205']}, 1))
+                                                                ['Sat, 05 Dec 2019 23:23:22 -0500', '20191205']},
+                                                                1))
+
+
+"""Test for func unpack_json"""
 
 
 class TestUnpackJson(unittest.TestCase):
@@ -32,7 +38,10 @@ class TestUnpackJson(unittest.TestCase):
                           })
 
 
-class TestReadNews(unittest.TestCase):
+"""Test for func read_news_from_cache"""
+
+
+class TestReadNewsFromCache(unittest.TestCase):
     def test(self):
         FILE_NAME = 'test.json'
         json_data = {'India': ["Sat, 07 Dec 2019 05:17:55 -0500", 'url', 'img_url', 'description', 'date'],
@@ -42,6 +51,9 @@ class TestReadNews(unittest.TestCase):
         read_data = read_news_from_cache(FILE_NAME)
         os.remove(FILE_NAME)
         self.assertEqual(read_data, json_data)
+
+
+"""Tests for func unpack_news"""
 
 
 class TestUnpackNews(unittest.TestCase):

@@ -2,6 +2,8 @@ import json
 from scripts.rss_reader import retrieve_from_cache
 import unittest
 
+"""Test for func retrieve_from_cache"""
+
 
 class TestRetrieveFromCache(unittest.TestCase):
     def test_without_date(self):

@@ -1,6 +1,8 @@
 from scripts.rss_parser import formatted_date
 import unittest
 
+"""Test for func formatted_date"""
+
 
 class TestFormattedDate(unittest.TestCase):
     def test(self):
