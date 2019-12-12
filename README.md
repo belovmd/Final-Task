@@ -68,7 +68,9 @@ Examle:
 Formatted date:
 	Wed, 11 Dec 2019 11:49:35 -0500 = 20191211
 
-#How install?
+````
+How install?
+````
 1) clone repository from https://github.com/PavelMartysiuk/Final-Task
 2) `$cd rss_readerend
 3)  `$python setup.py install
