@@ -128,7 +128,7 @@ def retrieve_from_url(url):
         return news, title, max_limit
 
 
-"""Data in Json format in the local storage file 'news.json or news from cite
+"""Data in Json format in the local storage file 'news.json or news from site
 Don't touch file argument.
 """
 
@@ -167,7 +167,7 @@ def retrieve_json(url, limit=None):
             return news, max_limit
 
 
-"""Function takes url of cite and path to saves news from sites in fb2 format
+"""Function takes url of site and path to saves news from sites in fb2 format
 Function returns this news and path"""
 
 
