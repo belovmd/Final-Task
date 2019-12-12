@@ -111,6 +111,10 @@ def dump_news_to_fb2(news, output_path):
     create_fb2(news, output_path)
 
 
+"""Function finds news from site and  return news,
+main_title, quantity of this news"""
+
+
 def retrieve_from_url(url):
     try:
         news, title = find_news(url)
@@ -136,7 +140,7 @@ def retrieve_from_cache(date=None, file='news.json'):
         return first_news, max_limit
 
 
-"""Function retrieve news from cite and return this news and it quantity"""
+"""Function retrieves news from cite and return this news and it quantity"""
 
 
 def retrieve_json(url, limit=None):
@@ -166,7 +170,7 @@ def conversion_to_fb2_with_url(url, path=None):
     return news, path
 
 
-"""CLI"""
+"""Run CLI"""
 
 
 def main():

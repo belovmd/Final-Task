@@ -44,6 +44,7 @@ All data from sites saved in the local storage in json format. Name of this stor
 JSON structure:
 	 
 ```
+All data from sites saved in the local storage in json format. Name of this storage is news.json
 {
 		"title":[pub_date, link, img_url, description, formatted_date]  
 		...
