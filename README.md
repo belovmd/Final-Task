@@ -74,7 +74,7 @@ Formatted date:
 How install?
 ````
 1) clone repository from https://github.com/PavelMartysiuk/Final-Task
-2) `$cd rss_readerend
-3)  `$python setup.py install
+2) cd rss_readerend
+3) python setup.py install
 4) run `$rss_reader https://news.yahoo.com/rss --limit 2 --verbose`
 	
